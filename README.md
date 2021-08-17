@@ -1,5 +1,5 @@
 # jsfuck.h
-JSFuck obfuscator written in ANSI C. For more info, go to [jsfuck.com](https://jsfuck.com).
+JSFuck obfuscator written in ANSI C. For more info, go to [jsfuck.com](http://www.jsfuck.com).
 
 ### Example
 ```c
