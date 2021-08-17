@@ -3,10 +3,6 @@
 jsfuck_str_t * jsfuck_str_new(void) {
     jsfuck_str_t * ptr = malloc(sizeof(jsfuck_str_t));
     ptr->data = malloc(JSFUCK_STR_SIZE);
-
-    if (ptr->data == NULL)
-        return NULL;
-
     ptr->size = 0;
     ptr->limit = JSFUCK_STR_SIZE;
     return ptr;
