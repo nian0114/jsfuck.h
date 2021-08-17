@@ -1,2 +1,2 @@
 # jsfuck.h
-JSFuck Deobfuscator written in ANSI C.
+JSFuck obfuscator written in ANSI C.
