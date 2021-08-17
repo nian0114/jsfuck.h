@@ -27,7 +27,7 @@ void jsfuck_get(const char c, jsfuck_str_t * s) {
     if (c < 0x1F || c > 0x7F)
         return jsfuck_custom(c, s);
     else if (c > 47 && c < 58)
-        return jsfuck_str_append(s, jsfuck_nums[c - 48], sizeof(jsfuck_nums[c - 48]) - 1);
+        return jsfuck_str_append(s, jsfuck_nums[c - 48], strlen(jsfuck_nums[c - 48]));
     
     /* i was originally about to turn these to arrays but i don't
        think it's worth the effort, so enjoy the trash code */
