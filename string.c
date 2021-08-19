@@ -1,20 +1,18 @@
 #include "string.h"
 
-jsfuck_str_t * jsfuck_str_new(void) {
+jsfuck_str_t * jsfuck_str_new(const unsigned short padding) {
     jsfuck_str_t * ptr = malloc(sizeof(jsfuck_str_t));
-    ptr->data = malloc(JSFUCK_STR_SIZE);
+    ptr->data = malloc(padding);
     ptr->size = 0;
-    ptr->limit = JSFUCK_STR_SIZE;
+    ptr->limit = padding;
+	ptr->padding = padding;
     return ptr;
 }
 
-void jsfuck_str_append(jsfuck_str_t * ptr, const char * new_str, unsigned int length) {
-    if (!length)
-        length = strlen(new_str);
-    
+void jsfuck_str_append(jsfuck_str_t * ptr, const char * new_str, const unsigned int length) {
     ptr->size += length;
     while (ptr->limit <= ptr->size) {
-        ptr->limit += JSFUCK_STR_SIZE;
+        ptr->limit += ptr->padding;
         ptr->data = realloc(ptr->data, ptr->limit);
     }
 

@@ -6,7 +6,7 @@ char * jsfuck(const char * code, const size_t length) {
         return "";
     
     const jsfuck_input_t inp = { code, length };
-    jsfuck_str_t * output = jsfuck_str_new();
+    jsfuck_str_t * output = jsfuck_str_new(0xFFF);
     
     jsfuck_tokenizer_t * tokenizer = token_init(output, &inp);
     token_start(tokenizer);

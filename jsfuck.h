@@ -8,7 +8,7 @@
 #include <string.h>
 #include "common.h"
 
-extern jsfuck_str_t * jsfuck_str_new(void);
+extern jsfuck_str_t * jsfuck_str_new(const unsigned short padding);
 extern void jsfuck_str_append(jsfuck_str_t * ptr, char * new_str, unsigned int length);
 extern char * jsfuck_str_trim(jsfuck_str_t * ptr);
 
