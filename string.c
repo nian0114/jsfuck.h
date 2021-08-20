@@ -5,7 +5,7 @@ jsfuck_str_t * jsfuck_str_new(const unsigned short padding) {
     ptr->data = malloc(padding);
     ptr->size = 0;
     ptr->limit = padding;
-	ptr->padding = padding;
+    ptr->padding = padding;
     return ptr;
 }
 
