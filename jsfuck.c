@@ -2,7 +2,7 @@
 #include "jsfuck.h"
 
 char * jsfuck(const char * code, const size_t length) {
-    if (!strlen(code) || !length)
+    if (!length)
         return "";
     
     const jsfuck_input_t inp = { code, length };
