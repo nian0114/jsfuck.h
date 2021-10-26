@@ -1,4 +1,5 @@
 #define __JSFUCK_C
+#include <stdlib.h>
 #include "jsfuck.h"
 
 char * jsfuck(const char * code, const size_t length) {
