@@ -1,5 +1,6 @@
-#include "token.h"
 #include <string.h>
+#include <stdlib.h>
+#include "token.h"
 
 jsfuck_tokenizer_t * token_init(jsfuck_str_t * output, const jsfuck_input_t * inp) {
     jsfuck_tokenizer_t * tokenizer = malloc(sizeof(jsfuck_tokenizer_t));
