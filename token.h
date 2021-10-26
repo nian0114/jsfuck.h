@@ -1,5 +1,5 @@
-#ifndef __JSFUCK_SIMPLE_H
-#define __JSFUCK_SIMPLE_H
+#ifndef __JSFUCK_TOKEN_H
+#define __JSFUCK_TOKEN_H
 
 #include "common.h"
 
