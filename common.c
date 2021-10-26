@@ -1,4 +1,5 @@
-#define __JSFUCK_COMMON_C
+#include <stdlib.h>
+#include <string.h>
 #include "common.h"
 
 static void jsfuck_custom(const char c, jsfuck_str_t * s) {
