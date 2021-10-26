@@ -1,3 +1,4 @@
+#include <string.h>
 #include "token.h"
 
 jsfuck_tokenizer_t * token_init(jsfuck_str_t * output, const jsfuck_input_t * inp) {

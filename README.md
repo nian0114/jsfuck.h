@@ -3,6 +3,7 @@ JSFuck obfuscator written in ANSI C. For more info/context, visit [www.jsfuck.co
 
 ### Build
 To build this library, you can clone the repo, compile every C source to an object file, and turn the object files to a static library file or a dynamic library file.
+> Windows users can simply just use the `build.bat` file to build the library.
 
 ### Example
 ```c

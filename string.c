@@ -1,3 +1,4 @@
+#include <string.h>
 #include "string.h"
 
 jsfuck_str_t * jsfuck_str_new(const unsigned short padding) {
