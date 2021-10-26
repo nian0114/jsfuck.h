@@ -2,7 +2,6 @@
 #define __JSFUCK_SIMPLE_H
 
 #include "common.h"
-#include <string.h>
 
 extern void jsfuck_str_append(jsfuck_str_t * ptr, char * new_str, unsigned int length);
 extern void jsfuck_get(const char c, jsfuck_str_t * s);
