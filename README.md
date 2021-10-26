@@ -7,14 +7,13 @@ To build this library, you can clone the repo, compile every C source to an obje
 ### Example
 ```c
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 
 #include "jsfuck.h"
 
 int main() {
     char code[] = "hello";
-    char * output = jsfuck(code, strlen(code));
+    char * output = jsfuck(code, 5);
     
     printf("%s\n", output);
     free(output);
