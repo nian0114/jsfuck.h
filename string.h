@@ -1,8 +1,6 @@
 #ifndef __JSFUCK_STRING_H
 #define __JSFUCK_STRING_H
 
-#include <stdlib.h>
-#include <string.h>
 #include "common.h"
 
 jsfuck_str_t * jsfuck_str_new(const unsigned short padding);
