@@ -1,6 +1,8 @@
 #ifndef __JSFUCK_COMMON_H
 #define __JSFUCK_COMMON_H
 
+#include <stdlib.h>
+
 #ifdef __JSFUCK_TOKEN_H
 #define JSFUCK_NAN            "[+[![]]]+[]+"
 #define JSFUCK_NAN_LEN        12
