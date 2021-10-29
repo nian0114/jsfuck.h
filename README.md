@@ -13,12 +13,16 @@ To build this library, you can clone the repo, compile every C source to an obje
 #include "jsfuck.h"
 
 int main() {
+    size_t output_size;
+
     char code[] = "hello";
-    char * output = jsfuck(code, 5);
+    char * output = jsfuck(code, 5, &output_size);
     
+    printf("length of output string: %d\n", output_size);
     printf("%s\n", output);
     free(output);
     
     return 0;
 }
 ```
+Pro Tip: You can use `NULL` for the third argument if determining output size is not necessary.
