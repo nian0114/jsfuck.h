@@ -10,6 +10,6 @@ extern void token_start(jsfuck_tokenizer_t * tokenizer);
 extern jsfuck_tokenizer_t * token_init(jsfuck_str_t * output, const jsfuck_input_t * inp);
 #endif
 
-char * jsfuck(const char * code, const size_t length);
+char * jsfuck(const char * code, const size_t length, size_t * size);
 
 #endif
