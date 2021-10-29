@@ -21,7 +21,7 @@ void jsfuck_str_append(jsfuck_str_t * ptr, const char * new_str, const unsigned 
 }
 
 char * jsfuck_str_trim(jsfuck_str_t * ptr) {
-    char * output = realloc(ptr, ptr->size);
+    char * output = realloc(ptr->data, ptr->size);
     output[ptr->size] = 0;
     
     free(ptr->data);
