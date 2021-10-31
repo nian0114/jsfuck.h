@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 printf "building..."
 cd lib
 for f in *.c; do gcc -c $f -o $f.o; done
