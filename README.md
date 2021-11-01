@@ -2,8 +2,7 @@
 JSFuck obfuscator written in ANSI C. For more info/context, visit [www.jsfuck.com](http://www.jsfuck.com). Tested on MinGW (Windows) and GCC (Linux, Ubuntu).
 
 ### Build
-To build this library, you can clone the repo, compile every C source to an object file, and turn the object files to a static library file or a dynamic library file.
-> Windows users can simply just use the `build.bat` file to build the library.
+To build this library and/or the transpiler, simply run the appropiate shell files.
 
 ### Library Usage
 ```c
@@ -27,10 +26,5 @@ int main() {
 ```
 Pro Tip: You can use `NULL` for the third argument if determining output size is not necessary.
 
-### Compiler
-This library also provides a compiler that compiles a js file to a obfuscated js file. Simply build it (like running `build_compiler.bat` in windows) and do some stuff with the compiler executable!
-
-```
-$ jsfuck test.js
-$ node jsfucked-test.js
-```
+### Transpiler
+This library also provides a transpiler that transpiles a js file to a obfuscated js file. Simply build it and do some stuff with it!
