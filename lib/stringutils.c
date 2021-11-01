@@ -21,10 +21,12 @@ void jsfuck_str_append(jsfuck_str_t * ptr, const char * new_str, const unsigned 
 }
 
 char * jsfuck_str_trim(jsfuck_str_t * ptr, size_t * s) {
+    ptr->size--;
     char * output = malloc(ptr->size);
-    output[ptr->size] = 0;
-    memcpy(output, ptr->data, ptr->size - 1);
     
+    memcpy(output, ptr->data, ptr->size);
+    output[ptr->size] = 0;
+
     if (s != NULL)
         *s = ptr->size;
     
