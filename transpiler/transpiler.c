@@ -21,10 +21,10 @@ int main(int argc, char ** argv) {
         return 1;
     }
     
-    printf(" read %d bytes.\ncompiling...", f->file_size);
+    printf(" read %d bytes.\ntranspiling...", f->file_size);
 
-    size_t compiled_size;
-    char * compiled = jsfuck(f->contents, f->file_size, &compiled_size);
+    size_t transpiled_size;
+    char * transpiled = jsfuck(f->contents, f->file_size, &transpiled_size);
     
     printf(" done.\n");
     
@@ -37,13 +37,13 @@ int main(int argc, char ** argv) {
     FILE * of = fopen(o_fn, "w");
     
     fputs(JSFUCK_HEADER, of);
-    fputs(compiled, of);
+    fputs(transpiled, of);
     fputs(JSFUCK_FOOTER, of);
     
-    printf("wrote %d bytes to %s.\n", 776 + compiled_size, o_fn);
+    printf("wrote %d bytes to %s.\n", 776 + transpiled_size, o_fn);
     
     free_file(f);
-    free(compiled);
+    free(transpiled);
     free(o_fn);
     fclose(of);
     
