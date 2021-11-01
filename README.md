@@ -28,3 +28,4 @@ Pro Tip: You can use `NULL` for the third argument if determining output size is
 
 ### Transpiler
 This library also provides a transpiler that transpiles a js file to a obfuscated js file. Simply build it and do some stuff with it!
+![transpiler demo](https://vierofernando.is-inside.me/K3pCKi2V.gif)
