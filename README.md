@@ -27,5 +27,5 @@ int main() {
 Pro Tip: You can use `NULL` for the third argument if determining output size is not necessary.
 
 ### Transpiler
-This library also provides a transpiler that transpiles a js file to a obfuscated js file. Simply build it and do some stuff with it!<br><br>
+This library also provides a transpiler that transpiles a js file to a jsfucked js file. Simply build it and play with it!<br><br>
 ![transpiler demo](https://vierofernando.is-inside.me/K3pCKi2V.gif)
