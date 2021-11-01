@@ -9,7 +9,7 @@
 
 int main(int argc, char ** argv) {
     if (argc != 2) {
-        puts("error: please add a valid js file to compile.");
+        puts("error: please add a valid js file to transpile to.");
         return 1;
     }
     
