@@ -61,6 +61,8 @@ static const char jsfuck_nums[10][48] = {
     "[!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]+!+[]]+"
 };
 
+static const unsigned char jsfuck_nums_len[10] = { 6, 8, 12, 17, 22, 27, 32, 37, 42, 47 };
+
 void jsfuck_get(const char c, jsfuck_str_t * s);
 
 #endif
