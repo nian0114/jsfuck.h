@@ -1,8 +1,12 @@
 # jsfuck.h
-JSFuck obfuscator written in ANSI C. For more info/context, visit [www.jsfuck.com](http://www.jsfuck.com). Tested on MinGW (Windows) and GCC (Linux, Ubuntu).
+JSFuck obfuscator written in ANSI C. For more info/context, visit [www.jsfuck.com](http://www.jsfuck.com).
 
 ### Build
 To build this library and/or the transpiler, simply run the appropiate shell files.
+
+### License
+- The C/C++ library is distributed under the [MIT License](https://opensource.org/licenses/MIT).
+- The jsfuck.h transpiler is distributed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ### Library Usage
 ```c
