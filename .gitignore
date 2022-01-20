@@ -1,4 +1,5 @@
-*.exe
-lib/*.o
-compiler/*.o
-*.js
+**/*.exe
+**/*.o
+**/*.a
+**/*.lib
+**/*

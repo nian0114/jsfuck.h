@@ -20,7 +20,7 @@ file_contents_t read_file(const char * filename) {
     out->file_size = 0;
     fseek(fp, 0, SEEK_END);
     
-    out->file_size = (size_t)ftell(fp);
+    out->file_size = (uint64_t)ftell(fp);
     fseek(fp, 0, SEEK_SET);
     
     out->contents = malloc(out->file_size);

@@ -1,8 +1,10 @@
 #ifndef JSFUCK_C_IO_H
 #define JSFUCK_C_IO_H
 
+#include <stdint.h>
+
 typedef struct {
-    size_t file_size;
+    uint64_t file_size;
     char * contents;
 } _file_contents_t, * file_contents_t;
 

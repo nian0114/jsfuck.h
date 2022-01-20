@@ -1,7 +1,6 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <jsfuck.h>
+#include <stdio.h>
 #include "io.h"
 
 #define JSFUCK_HEADER "[][(![]+[])[+[]]+(![]+[])[!+[]+!+[]]+(![]+[])[+!+[]]+(!![]+[])[+[]]][([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+([][[]]+[])[+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+(!![]+[])[+!+[]]]("
@@ -23,16 +22,14 @@ int main(int argc, char ** argv) {
     
     printf(" read %d bytes.\ntranspiling...", f->file_size);
 
-    size_t transpiled_size;
+    uint64_t transpiled_size;
     char * transpiled = jsfuck(f->contents, f->file_size, &transpiled_size);
     
     printf(" done.\n");
     
-    const size_t input_fn_l = strlen(argv[1]);
-    char * o_fn = malloc(input_fn_l + 10);
-    o_fn[input_fn_l + 9] = 0;
-    memcpy(o_fn, "jsfucked-", 9);
-    memcpy(o_fn + 9, argv[1], input_fn_l);
+    char o_fn[255];
+    strcpy(o_fn, "jsfucked-", 9);
+    o_fn[strcpy(o_fn + 9, argv[1], input_fn_l)] = 0;
     
     FILE * of = fopen(o_fn, "w");
     
@@ -44,7 +41,6 @@ int main(int argc, char ** argv) {
     
     free_file(f);
     free(transpiled);
-    free(o_fn);
     fclose(of);
     
     return 0;
